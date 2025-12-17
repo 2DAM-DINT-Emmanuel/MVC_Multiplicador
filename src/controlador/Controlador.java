@@ -13,7 +13,7 @@ import vista.Vista;
  *
  * @author emmnavmoj
  */
-public class Controlador {
+public class Controlador implements ActionListener {
     
     // Declaramos las variables de las clases creadas hasta ahora
     private final Vista view;
@@ -25,7 +25,7 @@ public class Controlador {
         this.view = view;
         
         // Ahora lo que haremos es traer la acción del botón, accediendo a los botones de vista
-        this.view.btnMultiplicar.addActionListener((ActionListener) this);
+        this.view.btnMultiplicar.addActionListener(this);
     }   
     
     // Creamos un método para inicializar la vista
@@ -38,6 +38,7 @@ public class Controlador {
     }
     
     // Ahora realizaremos la función que va a realizar el botón de multiplicar
+    @Override
     public void actionPerformed(ActionEvent e){
         // Ahora invocaremos al modelo y estableceremos los set de las propiedades
         model.setNumeroUno(Integer.parseInt(view.txtNumeroUno.getText()));

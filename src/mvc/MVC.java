@@ -31,6 +31,5 @@ public class MVC {
         
         // Establecemos a la vista que ya se puede ver o ya puede ser visible el JFrame
         view.setVisible(true);
-    }
-    
+    } 
 }
